@@ -5,9 +5,6 @@ const wrong = document.querySelector('#wrong');
 const guess = document.querySelector('#guess');
 const wins = document.querySelector('#wins');
 const man = document.querySelector('.man');
-var counter = 0;
-var words;
-var random;
 var choice;
 var word;
 var display;
@@ -40,10 +37,11 @@ colour.addEventListener('click', e => {
         }
     }
 });
+init();
 function init() {
-    words = ['food', 'drink', 'milk', 'apple', 'butterfly', 'fish', 'donkey', 'green', 'yellow', 'black',
+    const words = ['food', 'drink', 'milk', 'apple', 'butterfly', 'fish', 'donkey', 'green', 'yellow', 'black',
             'computer', 'phone', 'printer', 'pencil', 'rubber', 'face', 'arm', 'hand', 'flower', 'tree'];
-    random = Math.floor(Math.random() * 20);
+    const random = Math.floor(Math.random() * 20);
     choice = words[random];
     word = Array.from(choice);
     display = [];
@@ -56,9 +54,6 @@ function init() {
     guess.innerHTML = `${g}`;
     second.innerHTML = `${display.join(' ')}`;
     man.innerHTML = `<img src="imgs/${w}.png" alt="man">`;
-}
-if (counter === 0) {
-    init();
 }
 counter++;
 window.addEventListener('keydown', e => {
