@@ -1,15 +1,6 @@
 body{
     font-family: Segoe Print;
-}
-.change-colour{
-    display: inline;
-    vertical-align: top;
-}
-#colour{
-    display: inline;
-}
-#colour img{
-    border: 1px solid;
+    background-color: rgb(175, 175, 175);
 }
 .container{
     margin: auto;
@@ -17,22 +8,30 @@ body{
 }
 h1{
     font-family: Segoe Script;
-    color: rgb(211, 211, 211);
     margin: 20px auto;
     text-align: center;
 }
 h2{
     font-size: 20px;
+    color: rgb(77, 77, 77);
     margin: 20px auto;
     text-align: center;
 }
 .first{
-    margin: 10px auto;
-    width: min-content;
+    margin: 0 35%;
+    width: 30%;
+}
+.first::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.first div{
+  float: left;
 }
 .man{
-    height: 280px;
-    width: 160px;
+  width: 160px;
+  height: 280px;
 }
 .second{
     font-family: Arial, Helvetica, sans-serif;
