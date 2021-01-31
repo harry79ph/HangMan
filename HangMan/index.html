@@ -1,33 +1,27 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Hang Man Word Guessing Game</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Hang Man Word Guessing Game</title>
 </head>
-<body style="background-color: grey;">
-    <span class="change-colour">Change Colour: </span>
-    <div id="colour">
-        <img src="imgs\white.png" alt="" class="white">
-        <img src="imgs\grey.png" alt="" class="grey">
-        <img src="imgs\yellow.png" alt="" class="yellow">
-        <img src="imgs\red.png" alt="" class="red">
-        <img src="imgs\green.png" alt="" class="green">
-        <img src="imgs\blue.png" alt="" class="blue">
+
+<body>
+  <div class="container">
+    <h1>HangMan</h1>
+    <h2>Type a letter on your keyboard</h2>
+    <div class="first">
+      <div class="details">
+        <p>Wrong Letters: <span id="wrong">0</span></p>
+        <p>Guesses Left: <span id="guess">10</span></p>
+        <p>Wins: <span id="wins">0</span></p>
+      </div>
+      <div class="man"></div>
     </div>
-    <div class="container">
-        <h1>HangMan</h1>
-        <h2>Type a letter on your keyboard</h2>
-        <div class="first">
-            <span class="details">
-                <p>Wrong Letters: <span id="wrong">0</span></p>
-                <p>Guesses Left: <span id="guess">10</span></p>
-                <p>Wins: <span id="wins">0</span></p>
-            </span>
-            <span class="man"></span>
-        </div>
-        <div class="second"></div>
-    </div>
-    <script src="main.js"></script>
+    <div class="second"></div>
+  </div>
+  <script src="main.js"></script>
 </body>
+
 </html>
