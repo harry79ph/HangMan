@@ -23,11 +23,6 @@ h2{
     flex-wrap: wrap;
     justify-content: center;
 }
-.first::after{
-  display: block;
-  content: "";
-  clear: both;
-}
 .first .man{
   height: 280px;
 }
