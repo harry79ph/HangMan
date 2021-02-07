@@ -18,19 +18,17 @@ h2{
     text-align: center;
 }
 .first{
-    margin: 0 35%;
-    width: 30%;
+    margin: 0 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .first::after{
   display: block;
   content: "";
   clear: both;
 }
-.first div{
-  float: left;
-}
-.man{
-  width: 160px;
+.first .man{
   height: 280px;
 }
 .second{
