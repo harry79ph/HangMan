@@ -6,13 +6,12 @@ const man = document.querySelector('.man');
 const message = document.querySelector('.message')
 let choice, word, display, w, losses = 0, wins = 0;
 
-function init() { //resets all the values every round except wins
+function init() {
   const words = ['food', 'drink', 'milk', 'apple', 'dog', 'fish', 'donkey', 'green', 'yellow', 'computer'];
-  const random = Math.floor(Math.random() * 10); //gives a number between 0 - 9
-  choice = words[random]; //pickes a random array value which is a string
-  //console.log(choice);
+  const random = Math.floor(Math.random() * 10);
+  choice = words[random];
   word = Array.from(choice);
-  display = []; //character array will be displayed in second section
+  display = [];
   w = 0;
   display = word.map(item => '_');
   guess.innerHTML = `${10 - w}`;
@@ -20,16 +19,15 @@ function init() { //resets all the values every round except wins
   man.innerHTML = `<img src="imgs/${w}.png" alt="man">`;
 }
 init();
-window.addEventListener('keypress', e => { //gets the pressed key
+window.addEventListener('keypress', e => {
   let char = e.key.toLowerCase();
   if (/^[a-z]$/.test(char)) keyMatch(char);
 });
-const keyMatch = (key) => { //checks the pressed key
+const keyMatch = (key) => {
   if (choice.includes(key)) {
     word.forEach((letter, index) => {
       if (letter === key) display[index] = key;
     });
-    //console.log(display);
     second.innerHTML = `${display.join(' ')}`;
     if (!display.includes('_')) {
       wins++;
